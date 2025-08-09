@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>유튜브 화질</title>
+  <style>
+    body {
+      width: 200px;
+      background-color: #2c3e50; /* 어두운 배경색 */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 가독성 좋은 폰트 */
+      padding: 10px;
+      color: white;
+      border-radius: 10px; /* 팝업 창 전체 모서리를 둥글게 처리 */
+      overflow: hidden; /* 둥근 모서리 밖으로 내용이 넘치지 않도록 함 */
+    }
+
+    h1 {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+      color: #ecf0f1;
+      text-align: center;
+    }
+    
+    .quality-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px; /* 버튼 간 간격 */
+    }
+
+    .quality-options a {
+      display: block;
+      text-decoration: none; /* 밑줄 제거 */
+      color: #ecf0f1;
+      background-color: #34495e; /* 버튼 배경색 */
+      padding: 10px 15px;
+      border-radius: 5px; /* 둥근 모서리 */
+      font-size: 0.9em;
+      text-align: center;
+      transition: background-color 0.2s, transform 0.1s; /* 부드러운 호버 효과 */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    }
+    
+    .quality-options a:hover {
+      background-color: #2980b9; /* 마우스 오버 시 색상 변경 */
+      transform: translateY(-2px); /* 살짝 위로 올라가는 효과 */
+      cursor: pointer;
+    }
+
+    .quality-options a:active {
+      background-color: #1a6493; /* 더 어두운 배경색 */
+      transform: scale(0.98); /* 살짝 축소 */
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* 그림자도 작게 */
+    }
+    
+    .quality-options a.selected {
+      background-color: #27ae60;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>유튜브 화질 설정</h1>
+
+  <div class="quality-options">
+    <a class="quality-button" data-quality="highres">최고 화질</a>
+    <a class="quality-button" data-quality="3072p">8k</a>
+    <a class="quality-button" data-quality="2160p">4k</a>
+    <a class="quality-button" data-quality="1080p">1080p</a>
+    <a class="quality-button" data-quality="720p">720p</a>
+    <a class="quality-button" data-quality="480p">480p</a>
+    <a class="quality-button" data-quality="360p">360p</a>
+    <a class="quality-button" data-quality="240p">240p</a>
+    <a class="quality-button" data-quality="144p">144p</a>
+    <a class="quality-button" data-quality="자동">자동</a>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
